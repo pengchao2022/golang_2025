@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	var a int8
@@ -19,4 +22,7 @@ func main() {
 	fmt.Println(z)
 	//逗号隔开打印多个变量的值
 	fmt.Println(x, y, z)
+	// 打印数据类型
+	fmt.Println(reflect.TypeOf(x))
+	fmt.Println(reflect.TypeOf(c))
 }
