@@ -47,6 +47,6 @@ func main() {
 	// 数字转换成字符串只有一个返回值string
 	age := 23
 	my_age := strconv.Itoa(age)
-	fmt.Println(my_age, reflect.TypeOf(my_age))
+	fmt.Println(my_age, reflect.TypeOf(my_age)) // 打印结果为： 23 string
 
 }
