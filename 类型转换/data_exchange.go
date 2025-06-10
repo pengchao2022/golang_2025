@@ -32,7 +32,7 @@ func main() {
 	num_c := num_a + num_b
 	fmt.Printf("a + b 的值为：%d\n", num_c)
 
-	// 不使用if 语句，使用匿名变量存储 error 信息
+	// 不使用if 语句，使用匿名变量存储 error 信息， 匿名变量用下划线表示 _
 	myvalue_a, _ := strconv.Atoi(a)
 	mynum_a := myvalue_a
 	fmt.Println(mynum_a)
@@ -53,6 +53,6 @@ func main() {
 
 	my_circle := "3.1415926789"
 	my_circle_num, _ := strconv.ParseFloat(my_circle, 64)
-	fmt.Println(my_circle_num, reflect.TypeOf(my_circle_num))
+	fmt.Println(my_circle_num, reflect.TypeOf(my_circle_num)) //打印结果为：3.1415926789 float64
 
 }
