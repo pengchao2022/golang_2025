@@ -21,5 +21,5 @@ func main() {
 
 	fmt.Println(username == "allen" && passwd == "12378965")
 	fmt.Println("可以登录")
-
+	// 打印结果 true 可以登录
 }
