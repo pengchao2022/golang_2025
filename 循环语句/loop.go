@@ -37,4 +37,10 @@ func main() {
 		fmt.Println(count)
 
 	}
+	// 计算1加到100 的和
+	sum := 0
+	for i := 0; i <= 100; i++ {
+		sum += i
+	}
+	fmt.Println(sum)
 }
