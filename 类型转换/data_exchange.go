@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	// 数字和字符串的转换
+	// 整型数字字符串转换成数字
 	var a = "1"
 	var b = "2"
 	c := a + b
@@ -48,5 +48,11 @@ func main() {
 	age := 23
 	my_age := strconv.Itoa(age)
 	fmt.Println(my_age, reflect.TypeOf(my_age)) // 打印结果为： 23 string
+
+	// 浮点型字符串转换成数字
+
+	my_circle := "3.1415926789"
+	my_circle_num, _ := strconv.ParseFloat(my_circle, 64)
+	fmt.Println(my_circle_num, reflect.TypeOf(my_circle_num))
 
 }
