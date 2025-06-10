@@ -49,7 +49,7 @@ func main() {
 	my_age := strconv.Itoa(age)
 	fmt.Println(my_age, reflect.TypeOf(my_age)) // 打印结果为： 23 string
 
-	// 浮点型字符串转换成数字
+	// 浮点型字符串转换成浮点型数字
 
 	my_circle := "3.1415926789"
 	my_circle_num, _ := strconv.ParseFloat(my_circle, 64)
