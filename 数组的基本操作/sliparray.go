@@ -71,4 +71,20 @@ func main() {
 		}
 	}
 
+	// 修改数组里面元素的值
+	// 将姓名里面姓“李"的人全部改为匿名
+	// 注意，这里使用names[i] = “匿名” 而不能使用 v = “匿名”
+
+	var names = [...]string{"李飞", "李婷", "李娜", "周杰伦", "周华健", "李军", "李凡", "董卓", "吕布"}
+	var count = 0
+	for i, v := range names {
+		if strings.HasPrefix(v, "李") {
+			names[i] = "匿名"
+			count++
+
+		}
+	}
+	fmt.Printf("共找到 %d 个姓李的员工\n", count)
+	fmt.Println(names) // 打印结果为：[匿名 匿名 匿名 周杰伦 周华健 匿名 匿名 董卓 吕布]
+
 }
