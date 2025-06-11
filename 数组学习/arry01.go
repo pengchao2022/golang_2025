@@ -28,10 +28,10 @@ func main() {
 	fmt.Println(age)
 
 	// 省略数组长度
-	cities := []string{"sahnghai", "jinan", "beijing", "jilin", "dalian"}
+	cities := [...]string{"sahnghai", "jinan", "beijing", "jilin", "dalian"}
 	fmt.Println(cities)
 
-	months := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+	months := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
 	fmt.Println(months)
 
 	// 数组的空间地址都是连续的
