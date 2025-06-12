@@ -43,7 +43,7 @@ func main() {
 	var num2 = []int{2000, 3000, 4000}
 	copy(num1, num2)
 	fmt.Println(num1) // 打印结果为 [2000 3000 4000 4 5 6]
-	copy(num2, num1)
+	copy(num2, num1)  // copy 失败
 	fmt.Println(num2)
 
 }
