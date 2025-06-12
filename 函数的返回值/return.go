@@ -22,7 +22,7 @@ func main() {
 	// 当然你也可以直接打印
 	fmt.Println(addNum(4, 9))
 
-	//有多个返回值的函数，需要有多个变量来接受
+	//有多个返回值的函数，需要有多个变量来接收
 	ret5, ret6 := query()
 	fmt.Println(ret5)
 	fmt.Println(ret6)
