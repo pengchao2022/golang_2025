@@ -50,6 +50,11 @@ func main() {
 	// 获取allen 的身高
 	fmt.Println(my_customer_slice[0]["height"])
 
+	// 打印出每个客户的信息
+	for _, value := range my_customer_slice {
+		fmt.Printf("客户姓名：%s,客户年龄：%s,客户身高：%s,客户性别：%s,客户手机号码：%s\n", value["name"], value["age"], value["height"], value["gender"], value["mobile"])
+	}
+
 	// 遍历map 中的key ,value
 	for key, value := range customer_info_3 {
 		fmt.Println(key, value)
