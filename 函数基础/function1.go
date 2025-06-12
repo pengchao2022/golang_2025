@@ -14,6 +14,7 @@ func loop_print() {
 
 func main() {
 	//自定义的函数，需要放在main()函数里去执行
+	// main 函数是程序的入口 对于go 语言必须要有 main 包 ，main函数
 	loop_print()
 
 }
