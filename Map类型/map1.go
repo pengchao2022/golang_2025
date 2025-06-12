@@ -51,8 +51,8 @@ func main() {
 	fmt.Println(my_customer_slice[0]["height"])
 
 	// 打印出每个客户的信息
-	for _, value := range my_customer_slice {
-		fmt.Printf("客户姓名：%s,客户年龄：%s,客户身高：%s,客户性别：%s,客户手机号码：%s\n", value["name"], value["age"], value["height"], value["gender"], value["mobile"])
+	for i, value := range my_customer_slice {
+		fmt.Printf("客户ID：%d,客户姓名：%s,客户年龄：%s,客户身高：%s,客户性别：%s,客户手机号码：%s\n", i, value["name"], value["age"], value["height"], value["gender"], value["mobile"])
 	}
 
 	//添加一个客户的信息 比如 Sophia
