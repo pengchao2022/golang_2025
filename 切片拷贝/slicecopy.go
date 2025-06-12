@@ -38,4 +38,12 @@ func main() {
 	fmt.Println(fruits)    //[apple kiwi banana]
 	fmt.Println(my_fruits) // [apple orange banana ] 可以看到my_fruits 是不变的
 
+	// copy 练习
+	var num1 = []int{1, 2, 3, 4, 5, 6}
+	var num2 = []int{2000, 3000, 4000}
+	copy(num1, num2)
+	fmt.Println(num1) // 打印结果为 [2000 3000 4000 4 5 6]
+	copy(num2, num1)
+	fmt.Println(num2)
+
 }
