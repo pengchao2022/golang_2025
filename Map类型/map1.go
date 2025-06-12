@@ -55,6 +55,16 @@ func main() {
 		fmt.Printf("客户姓名：%s,客户年龄：%s,客户身高：%s,客户性别：%s,客户手机号码：%s\n", value["name"], value["age"], value["height"], value["gender"], value["mobile"])
 	}
 
+	//添加一个客户的信息 比如 Sophia
+	customer_info_4 := map[string]string{"name": "Sophia", "age": "35", "height": "181", "gender": "female", "mobile": "15710045261"}
+	my_customer_slice = append(my_customer_slice, customer_info_4)
+	fmt.Println(my_customer_slice)
+
+	// 打印出每个客户的信息
+	for _, value := range my_customer_slice {
+		fmt.Printf("客户姓名：%s,客户年龄：%s,客户身高：%s,客户性别：%s,客户手机号码：%s\n", value["name"], value["age"], value["height"], value["gender"], value["mobile"])
+	}
+
 	// 遍历map 中的key ,value
 	for key, value := range customer_info_3 {
 		fmt.Println(key, value)
