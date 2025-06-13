@@ -8,7 +8,6 @@ package main
 */
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -20,13 +19,25 @@ func writeBytesOrStr(file *os.File) {
 	//当然也可以使用file.WriteString(s) 来写入
 
 }
+func writeFile() {
+	//定义你的文件内容
+	data := ` 今天我，寒夜里看雪飘过，怀着冷却了的心窝想远方，风雨里追赶，雾里看不清影踪，天空海阔你与我，可会变？
+	
+	
+	`
+	// 直接写整个文件
+	os.WriteFile("allen_new.txt", []byte(data), 0666)
+
+}
 func main() {
 	//写文件操作
-	file, err := os.OpenFile("allen.txt", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0777)
-	if err != nil {
-		fmt.Println(err)
-	}
+	/*
+		file, err := os.OpenFile("allen.txt", os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0777)
+		if err != nil {
+			fmt.Println(err)
+		}
 
-	writeBytesOrStr(file)
-
+		writeBytesOrStr(file)
+	*/
+	writeFile()
 }
