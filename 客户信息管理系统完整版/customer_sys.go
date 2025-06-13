@@ -6,6 +6,7 @@ location: Shanghai
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"os"
 	"time"
@@ -18,16 +19,19 @@ func main() {
 	********************** 客户信息管理系统 *******************
 	1.查看用户信息                     2.添加用户信息
 	3.删除用户信息                     4.修改用户信息
-	5.退出系统
+	5.退出系统                         6.保存用户信息
 
 	*********************************************************
 	`
 	var my_customer_slice = []map[string]string{}
 	count := 0
+	ret, _ := os.ReadFile("customer_info.json")
+	json.Unmarshal(ret, &my_customer_slice)
+
 	for {
 		fmt.Println(control_panel)
 		var choice int
-		fmt.Println("请在此输入你的选择(1-5):")
+		fmt.Println("请在此输入你的选择(1-6):")
 		fmt.Scan(&choice)
 		switch choice {
 		case 1:
@@ -181,6 +185,19 @@ func main() {
 			fmt.Printf("系统将在5秒后退出...欢迎再次使用！\n")
 			time.Sleep(5 * time.Second)
 			os.Exit(200)
+		case 6:
+			fmt.Println("保存用户信息")
+			ret, _ := json.Marshal(my_customer_slice)
+			os.WriteFile("customer_info.json", ret, 0666)
+			// 保存失败的话，可以打印失败信息
+			if err := os.WriteFile("customer_info.json", ret, 0666); err != nil {
+				fmt.Println("文件写入失败：", err)
+			} else {
+				fmt.Println("正在保存数据，请稍等...")
+				time.Sleep(5 * time.Second)
+				fmt.Println("保存成功")
+			}
+
 		default:
 			fmt.Println("输入有误！请重新输入！")
 
