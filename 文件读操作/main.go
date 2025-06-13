@@ -47,7 +47,12 @@ func readByline_whole(file *os.File) {
 	}
 }
 func readFile() {
+	// 注意 ioutil 已经被Go语言舍弃，换做了 os.readfile
 	data, _ := ioutil.ReadFile("/Users/pengchaoma/golang/golang_2025/文件读操作/七里香.txt")
+	fmt.Println(string(data))
+}
+func readmyfile() {
+	data, _ := os.ReadFile("/Users/pengchaoma/golang/golang_2025/文件读操作/七里香.txt")
 	fmt.Println(string(data))
 }
 
@@ -68,6 +73,7 @@ func main() {
 	// 按行读取整个文件内容
 	//readByline_whole(file)
 	//适用于小文件的整个读取
-	readFile() // 不需要用到句柄
+	//readFile() // 不需要用到句柄
+	readmyfile()
 
 }
